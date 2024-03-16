@@ -35,7 +35,7 @@ class CounterScreen extends StatelessWidget {
       body: Center(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [SizedBox(width: 20),
+          children: [SizedBox(width: MediaQuery.of(context).size.width/10),
            // IconButton(onPressed: (){}, icon: Icon(Icons.add,)),
              ElevatedButton.icon(onPressed: (){
               cubit.decreaseNumber();// استدعاء الfunction
@@ -44,13 +44,14 @@ class CounterScreen extends StatelessWidget {
               child: 
               Text('${cubit.number}',
               textAlign: TextAlign.center,style: TextStyle(
-              fontSize: 80, fontWeight: FontWeight.bold
+              fontSize:MediaQuery.of(context).size.width/5, 
+              fontWeight: FontWeight.bold
             ),)),
 
             ElevatedButton.icon(onPressed: (){
               cubit.increaseNumber();
             }, icon:  Icon(Icons.add), label: const Text('')),
-            SizedBox(width: 20)
+            SizedBox(width: MediaQuery.of(context).size.width/10)
           ],
         ),
       )
