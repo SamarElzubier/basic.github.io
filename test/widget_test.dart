@@ -6,19 +6,15 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-//import 'package:flutter_projrcts/api_1.dart';
-//import 'package:flutter_projrcts/api_test.dart';
-//import 'package:flutter_projrcts/app_router_1.dart';
-import 'package:flutter_projrcts/my_cubit/counter_screen_cubit.dart';
+import 'package:flutter_projrcts/register.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-//import 'package:flutter_projrcts/main.dart';
 
 void main() {
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
-    await tester.pumpWidget( CounterScreen());
-   // await tester.pumpWidget( RickAndMorty(appRouter: AppRouter(),));
+    // ignore: prefer_const_constructors
+    await tester.pumpWidget(Login());
+    //await tester.pumpWidget( SignUp(routes: Login(),));
 
     // Verify that our counter starts at 0.
     expect(find.text('0'), findsOneWidget);

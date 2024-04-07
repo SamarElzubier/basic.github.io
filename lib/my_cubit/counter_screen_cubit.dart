@@ -2,6 +2,7 @@
 
 //import 'package:flutter/cupertino.dart';
 import'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 //import 'package:flutter/rendering.dart';
 //import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -11,7 +12,7 @@ import 'package:flutter_projrcts/my_cubit/states1.dart';
 class CounterScreen extends StatelessWidget {
   const
    CounterScreen({super.key});
-   //CounterCubit cubit =  CounterCubit.get( context);
+   //var or CounterCubit cubit =  CounterCubit.get( context);
   @override
   Widget build(BuildContext context) { 
     return BlocProvider(
@@ -50,7 +51,7 @@ class CounterScreen extends StatelessWidget {
 
             ElevatedButton.icon(onPressed: (){
               cubit.increaseNumber();
-            }, icon:  Icon(Icons.add), label: const Text('')),
+            }, icon:  Icon(Icons.add), label: const Text('',)),
             SizedBox(width: MediaQuery.of(context).size.width/10)
           ],
         ),
